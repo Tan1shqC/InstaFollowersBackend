@@ -9,7 +9,9 @@ const fetchInstaPage = async (username) => {
     // const res = await fetch("https://www.instagram.com/tan1shq_c/");
     // const res = await fetch("https://www.instagram.com/chriswillx/");
     
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        headless: 'new'
+    });
     const page = await browser.newPage();
     let followersCount = -1;
     
