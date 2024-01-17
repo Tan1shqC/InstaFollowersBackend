@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer');
 // const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const fetchInstaPage = async (username) => {
     // const res = await fetch("https://readwell.onrender.com/");
@@ -56,6 +57,7 @@ const port = 3000;
 
 // Use body-parser middleware to parse JSON
 app.use(bodyParser.json());
+app.use(cors());
 
 // Define a route that handles POST requests with JSON payload
 app.get('/', async (req, res) => {
