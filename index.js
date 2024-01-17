@@ -3,11 +3,16 @@ const puppeteer = require('puppeteer');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const browser_1 = require("@puppeteer/browsers");
+
 
 const fetchInstaPage = async (username) => {
     // const res = await fetch("https://readwell.onrender.com/");
     // const res = await fetch("https://www.instagram.com/tan1shq_c/");
     // const res = await fetch("https://www.instagram.com/chriswillx/");
+    await browser_1.install({
+        browser: browser_1.Browser.CHROME
+    });
     
     const browser = await puppeteer.launch({
         headless: 'new'
