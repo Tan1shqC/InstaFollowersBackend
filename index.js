@@ -3,7 +3,6 @@ const puppeteer = require('puppeteer');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const browser_1 = require("@puppeteer/browsers");
 
 
 const fetchInstaPage = async (username) => {
@@ -73,10 +72,5 @@ app.get('/', async (req, res) => {
 
 // Start the server
 app.listen(port, async () => {
-    // await browser_1.install({
-    //     browser: browser_1.Browser.CHROME,
-    //     cacheDir: "/opt/render/.cache/puppeteer",
-    //     buildId: browser_1.resolveBuildId(browser_1.Browser.CHROME, browser_1.BrowserPlatform.LINUX, ""),
-    // });
     console.log(`Server listening at http://localhost:${port}`);
 });
