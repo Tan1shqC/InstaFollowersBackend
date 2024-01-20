@@ -14,7 +14,7 @@ const fetchInstaPage = async (username) => {
     const browser = await puppeteer.launch({
         headless: 'new',
         // executablePath: path.join(__dirname, '.cache', 'puppeteer', 'chrome', 'linux-119.0.6045.105', 'chrome-linux64', 'chrome')
-        executablePath: path.join('opt', 'render', 'project', '.render', 'chrome', 'opt', 'google', 'chrome', 'chrome')
+        executablePath: path.join('/opt', 'render', 'project', '.render', 'chrome', 'opt', 'google', 'chrome', 'chrome')
     });
     const page = await browser.newPage();
     let followersCount = -1;
